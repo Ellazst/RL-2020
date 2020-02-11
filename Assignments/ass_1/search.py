@@ -12,38 +12,55 @@ BOARD_SIZE = 4
 AI = HexBoard.BLUE
 PLAYER = HexBoard.RED
 
-# Initialise the board.
-board = HexBoard(BOARD_SIZE)
 
-def minimax(virtual_board,d,mx=True):
+
+'''
+virtual_board = board
+search_depth = 1
+
+def minimax(board,d,mx=True):
 	if d <= 0:
-		return 2
+		return 'Hey!'
+	else:
+		d -= 1
+		print(d)
+		return minimax(board,d)
+
+hoi = minimax(virtual_board,search_depth,)
+print(hoi)
+
+'''
+def minimax(board,d,mx=True):
+	if d <= 0:
+		return heuristic_eval(board)
 	elif mx == True:
 		for i in range(BOARD_SIZE):
 			for j in range(BOARD_SIZE):
-				if virtual_board.is_empty((i,j)):
-					virtual_board.place((i,j),AI)
-					minimax(virtual_board,d-1,False)
+				if board.is_empty((i,j)):
+					board.place((i,j),AI)
+					board.print()
+					return minimax(board,d-1,False)
 	elif mx == False:
 		for i in range(BOARD_SIZE):
 			for j in range(BOARD_SIZE):
-				if virtual_board.is_empty((i,j)):
-					virtual_board.place((i,j),PLAYER)
-					minimax(virtual_board,d-1,True)
-					
-	#virtual_board.print()
+				if board.is_empty((i,j)):
+					board.place((i,j),PLAYER)
+					board.print()
+					return minimax(board,d-1,True)
+
 
 def heuristic_eval(board):
-	return rd.randint(1,10) # For now, the evaluation function is just a random number.
+	# For now, the evaluation function is just a random number.
+	return rd.randint(1,10) 
 
+# Initialise the board.
+board = HexBoard(BOARD_SIZE)
+
+# Make a copy for the search algorithm.
 virtual_board = board
-hoi = minimax(virtual_board,1)
 
-print(hoi)
+# Apply the minimax algorithm.
+search_depth = 3
+eval_val = minimax(virtual_board,search_depth)
 
-#print(heuristic_val)
-
-
-
-
-
+print(eval_val)
