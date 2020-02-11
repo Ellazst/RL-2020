@@ -1,7 +1,7 @@
 import numpy as np
 from hex_skeleton import HexBoard
 
-# sanity check that wins are detected
+# Sanity check that wins are detected
 for i in range(0,2):
   winner = HexBoard.RED if i == 0 else HexBoard.BLUE
   loser = HexBoard.BLUE if i == 0 else HexBoard.RED

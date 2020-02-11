@@ -74,7 +74,7 @@ class HexBoard:
       if self.traverse(color, n, visited): return True
     return False
 
-	# Returns true of someone has won the game.
+	# Returns true if someone has won the game.
   def check_win(self, color):
     for i in range(self.size):
       if color == HexBoard.BLUE: move = (0,i)
