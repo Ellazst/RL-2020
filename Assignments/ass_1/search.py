@@ -63,6 +63,7 @@ def alphabeta(board,d,a,b,mx=True):
 					if g > g_optimal:
 						best_move = (i,j)
 					board.make_empty((i,j))
+					#virtual_board.print()
 					if g >= b:
 						break
 	elif mx == False:
@@ -75,6 +76,7 @@ def alphabeta(board,d,a,b,mx=True):
 					g = min(g,alphabeta(board,d-1,a,b,mx=True))
 					b = min(b,g) # Update beta
 					board.make_empty((i,j))
+					#virtual_board.print()
 					if a >= g:
 						break
 	if d == search_depth:
@@ -104,9 +106,9 @@ def AI_make_move(board):
 				y += char
 			elif find_x == True:
 				x += char
-			
+		
 		move_to_make = (int(x),int(y))
-		print(move_to_make)
+		board.place(move_to_make,AI)
 
 
 
@@ -118,15 +120,15 @@ board = HexBoard(BOARD_SIZE)
 virtual_board = board
 
 # Apply the minimax algorithm.
-search_depth = 3
+search_depth = 2
 #eval_val,best_move = minimax(virtual_board,search_depth)
 
 # Apply the alphabeta algorithm
 eval_val = alphabeta(virtual_board,d=search_depth,a=-INF,b=INF)
 #print(eval_val)
-#AI_make_move(board)
+AI_make_move(board)
 
-board.place((0,0),AI)
 board.print()
+
 
 
