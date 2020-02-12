@@ -15,22 +15,6 @@ PLAYER = HexBoard.RED
 EMPTY = HexBoard.EMPTY
 INF = 99999
 
-'''
-virtual_board = board
-search_depth = 1
-
-def minimax(board,d,mx=True):
-	if d <= 0:
-		return 'Hey!'
-	else:
-		d -= 1
-		print(d)
-		return minimax(board,d)
-
-hoi = minimax(virtual_board,search_depth,)
-print(hoi)
-
-'''
 def minimax(board,d,mx=True):
 	if d <= 0:
 		return heuristic_eval(board)
@@ -40,7 +24,7 @@ def minimax(board,d,mx=True):
 			for j in range(BOARD_SIZE):
 				if board.is_empty((i,j)):
 					board.place((i,j),AI)
-					board.print()
+					#board.print()
 					g = max(g,minimax(board,d-1,False))
 					board.make_empty((i,j))
 					print(f'Depth: {d}. Max: {g}')
@@ -50,17 +34,47 @@ def minimax(board,d,mx=True):
 			for j in range(BOARD_SIZE):
 				if board.is_empty((i,j)):
 					board.place((i,j,),PLAYER)
-					board.print()
+					#board.print()
 					g = min(g,minimax(board,d-1,True))
 					board.make_empty((i,j))
 					print(f'Depth {d} Min: {g}')
+	return g
+
+def alphabeta(board,d,a,b,mx=True):
+	if d <= 0:
+		return heuristic_eval(board)
+	elif mx == True:
+		g = -INF
+		for i in range(BOARD_SIZE):
+			for j in range(BOARD_SIZE):
+				if board.is_empty((i,j)):
+					board.place((i,j),AI)
+					board.print()
+					g = max(g,alphabeta(board,d-1,a,b,mx=False))
+					a = max(a,g) # Update alpha.
+					board.make_empty((i,j))
+					if g >= b:
+						break
+	elif mx == False:
+		g = INF
+		for i in range(BOARD_SIZE):
+			for j in range(BOARD_SIZE):
+				if board.is_empty((i,j)):
+					board.place((i,j),PLAYER)
+					board.print()
+					g = min(g,alphabeta(board,d-1,a,b,mx=True))
+					b = min(b,g) # Update beta
+					board.make_empty((i,j))
+					if a >= g:
+						break
+
 	return g
 
 
 def heuristic_eval(board):
 	# For now, the evaluation function is just a random number.
 	random_number = rd.randint(1,10)
-	print(random_number)
+	#print(random_number)
 	return random_number 
 
 # Initialise the board.
@@ -71,8 +85,8 @@ virtual_board = board
 
 # Apply the minimax algorithm.
 search_depth = 2
-eval_val = minimax(virtual_board,search_depth)
+#eval_val = minimax(virtual_board,search_depth)
 
-print("")
-print(eval_val)
-print("")
+# Apply the alphabeta algorithm
+eval_val = alphabeta(virtual_board,d=search_depth,a=-INF,b=INF)
+
