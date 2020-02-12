@@ -9,7 +9,7 @@ import random as rd
 import sys 
 
 # Global variables
-BOARD_SIZE = 2
+BOARD_SIZE = 8
 AI = HexBoard.BLUE
 PLAYER = HexBoard.RED
 EMPTY = HexBoard.EMPTY
@@ -92,9 +92,7 @@ def heuristic_eval(board):
 	#print(random_number)
 	return random_number
 
-def AI_make_move(board):
-	txtfile = open('movelist.txt','r')
-
+def ai_make_move(board):
 	with open('movelist.txt','r') as f:
 		x = ''; y = ''
 		find_x = True
@@ -109,6 +107,28 @@ def AI_make_move(board):
 		
 		move_to_make = (int(x),int(y))
 		board.place(move_to_make,AI)
+		board.print()
+
+def player_make_move(board):
+	print('Next move.')
+	x = int(input(' x: '))
+	y = int(input(' y: '))
+
+	f = open('movelist.txt','w')
+	f.write(f'{x},{y}')
+	f.close()
+
+	board.place((x,y),PLAYER)
+	board.print()
+
+def play_game(board):
+	# Make a copy for the search algorithm.
+	virtual_board = board
+
+	while not board.game_over:
+		eval_val = alphabeta(virtual_board,d=search_depth,a=-INF,b=INF)
+		ai_make_move(board)
+		player_make_move(board)
 
 
 
@@ -116,19 +136,24 @@ def AI_make_move(board):
 # Initialise the board.
 board = HexBoard(BOARD_SIZE)
 
-# Make a copy for the search algorithm.
-virtual_board = board
+# Play the game.
+search_depth = 2
+play_game(board)
+
+
 
 # Apply the minimax algorithm.
-search_depth = 2
 #eval_val,best_move = minimax(virtual_board,search_depth)
 
 # Apply the alphabeta algorithm
-eval_val = alphabeta(virtual_board,d=search_depth,a=-INF,b=INF)
+#eval_val = alphabeta(virtual_board,d=search_depth,a=-INF,b=INF)
 #print(eval_val)
-AI_make_move(board)
+#ai_make_move(board)
 
-board.print()
+#player_make_move(board)
+
+
+
 
 
 
