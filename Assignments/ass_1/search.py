@@ -9,7 +9,7 @@ import random as rd
 import sys 
 
 # Global variables
-BOARD_SIZE = 2
+BOARD_SIZE = 5
 AI = HexBoard.BLUE
 PLAYER = HexBoard.RED
 EMPTY = HexBoard.EMPTY
@@ -46,6 +46,16 @@ def minimax(board,d,mx=True):
 					print(f'Depth {d} Min: {g}')
 	return g,best_move
 
+def d2l_conversion(x_coor):
+	letter_arr = np.array(['a','b','c','d','e','f','g','h','i','j']) # Max a playfield of 10 by 10.
+	return letter_arr[x_coor]
+
+def l2d_conversion(letter):
+	letter_arr = np.array(['a','b','c','d','e','f','g','h','i','j'])
+	for i in range(len(letter_arr)):
+		if letter == letter_arr[i]:
+			return i
+
 def alphabeta(board,d,a,b,mx=True):
 	best_move = (-1,-1) # # Will always be updated.
 	if d <= 0:
@@ -56,7 +66,7 @@ def alphabeta(board,d,a,b,mx=True):
 			for j in range(BOARD_SIZE):
 				if board.is_empty((i,j)):
 					board.virtual_place((i,j),AI)
-					board.print()
+					#board.print()
 					g_optimal = g
 					g = max(g,alphabeta(board,d-1,a,b,mx=False))
 					a = max(a,g) # Update alpha.
@@ -71,7 +81,7 @@ def alphabeta(board,d,a,b,mx=True):
 			for j in range(BOARD_SIZE):
 				if board.is_empty((i,j)):
 					board.virtual_place((i,j),PLAYER)
-					board.print()
+					#board.print()
 					g = min(g,alphabeta(board,d-1,a,b,mx=True))
 					b = min(b,g) # Update beta
 					board.make_empty((i,j))
@@ -79,8 +89,8 @@ def alphabeta(board,d,a,b,mx=True):
 					if a >= g:
 						break
 	if d == search_depth:
-		f = open('movelist.txt','w')
-		f.write(f'{best_move[0]},{best_move[1]}')
+		f = open('movelist.txt','a')
+		f.write(f'\n{d2l_conversion(best_move[0])},{best_move[1]}')
 		f.close()
 	return g
 
@@ -99,22 +109,24 @@ def ai_make_move(board):
 		for char in lines[-1]: # Should work for numbers with digits > 1.
 			if char == ',':
 				find_x = False
-			elif find_x == False:
-				y += char
 			elif find_x == True:
 				x += char
+			elif find_x == False:
+				y += char
+			
 		
-		move_to_make = (int(x),int(y))
+		move_to_make = (l2d_conversion(x),int(y))
 		board.place(move_to_make,AI)
 		board.print()
 
 def player_make_move(board):
 	print('Next move.')
-	x = int(input(' x: '))
+	x = l2d_conversion(input(' x: '))
 	y = int(input(' y: '))
+	
 
-	f = open('movelist.txt','w')
-	f.write(f'{x},{y}')
+	f = open('movelist.txt','a')
+	f.write(f'\n{d2l_conversion(x)},{y}')
 	f.close()
 
 	board.place((x,y),PLAYER)
@@ -123,6 +135,11 @@ def player_make_move(board):
 def play_game(board):
 	# Make a copy for the search algorithm.
 	virtual_board = board
+
+	# Make a text file for the moves.
+	f = open('movelist.txt','w')
+	f.write('Movelist')
+	f.close()
 
 	while not board.game_over:
 		eval_val = alphabeta(virtual_board,d=search_depth,a=-INF,b=INF)
