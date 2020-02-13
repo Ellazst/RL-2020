@@ -9,7 +9,7 @@ import random as rd
 import sys 
 
 # Global variables
-BOARD_SIZE = 8
+BOARD_SIZE = 2
 AI = HexBoard.BLUE
 PLAYER = HexBoard.RED
 EMPTY = HexBoard.EMPTY
@@ -55,15 +55,14 @@ def alphabeta(board,d,a,b,mx=True):
 		for i in range(BOARD_SIZE):
 			for j in range(BOARD_SIZE):
 				if board.is_empty((i,j)):
-					board.place((i,j),AI)
-					#board.print()
+					board.virtual_place((i,j),AI)
+					board.print()
 					g_optimal = g
 					g = max(g,alphabeta(board,d-1,a,b,mx=False))
 					a = max(a,g) # Update alpha.
 					if g > g_optimal:
 						best_move = (i,j)
 					board.make_empty((i,j))
-					#virtual_board.print()
 					if g >= b:
 						break
 	elif mx == False:
@@ -71,8 +70,8 @@ def alphabeta(board,d,a,b,mx=True):
 		for i in range(BOARD_SIZE):
 			for j in range(BOARD_SIZE):
 				if board.is_empty((i,j)):
-					board.place((i,j),PLAYER)
-					#board.print()
+					board.virtual_place((i,j),PLAYER)
+					board.print()
 					g = min(g,alphabeta(board,d-1,a,b,mx=True))
 					b = min(b,g) # Update beta
 					board.make_empty((i,j))
@@ -137,7 +136,7 @@ def play_game(board):
 board = HexBoard(BOARD_SIZE)
 
 # Play the game.
-search_depth = 2
+search_depth = 3
 play_game(board)
 
 
