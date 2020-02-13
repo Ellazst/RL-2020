@@ -109,5 +109,11 @@ class HexBoard:
 
 # --- SELF WRITTEN FUNCTIONS ---
 
+	# Make a cell empty.
 	def make_empty(self,coordinates):
 		self.board[coordinates] = HexBoard.EMPTY
+
+	# Same as the place function but without the boolean variable game_over.
+	def virtual_place(self,coordinates,color): 
+		if not self.board[coordinates] == HexBoard.EMPTY:
+			self.board[coordinates] == color
