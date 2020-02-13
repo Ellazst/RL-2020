@@ -115,5 +115,11 @@ class HexBoard:
 
 	# Same as the place function but without the boolean variable game_over.
 	def virtual_place(self,coordinates,color): 
-		if not self.board[coordinates] == HexBoard.EMPTY:
-			self.board[coordinates] == color
+		if self.board[coordinates] == HexBoard.EMPTY:
+			self.board[coordinates] = color
+	
+	#def place(self, coordinates, color):
+	#	if not self.game_over and self.board[coordinates] == HexBoard.EMPTY:
+	#		self.board[coordinates] = color
+	#		if self.check_win(HexBoard.RED) or self.check_win(HexBoard.BLUE):
+	#			self.game_over = True
