@@ -1,0 +1,440 @@
+Alphabeta search.
+ Board size:   4
+ Search depth: 2
+
+rn = 9 d = 1 g = 9 a = -11 b = 9
+rn = 8 d = 1 g = 8 a = -11 b = 8
+rn = 7 d = 1 g = 7 a = -11 b = 7
+rn = 8 d = 1 g = 7 a = -11 b = 7
+rn = 7 d = 1 g = 7 a = -11 b = 7
+rn = 7 d = 1 g = 7 a = -11 b = 7
+rn = 7 d = 1 g = 7 a = -11 b = 7
+rn = 1 d = 1 g = 1 a = -11 b = 1
+rn = 4 d = 1 g = 1 a = -11 b = 1
+rn = 6 d = 1 g = 1 a = -11 b = 1
+rn = 2 d = 1 g = 1 a = -11 b = 1
+rn = 4 d = 1 g = 1 a = -11 b = 1
+rn = 8 d = 1 g = 1 a = -11 b = 1
+rn = 7 d = 1 g = 1 a = -11 b = 1
+rn = 7 d = 1 g = 1 a = -11 b = 1
+d = 2 g = 1 a = 1 b = 11
+rn = 4 d = 1 g = 4 a = 1 b = 4
+rn = 8 d = 1 g = 4 a = 1 b = 4
+rn = 8 d = 1 g = 4 a = 1 b = 4
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 1 d = 1 g = 1 a = 1 b = 1
+rn = 4 d = 1 g = 1 a = 1 b = 1
+rn = 4 d = 1 g = 1 a = 1 b = 1
+d = 2 g = 1 a = 1 b = 11
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 5 d = 1 g = 2 a = 1 b = 2
+rn = 7 d = 1 g = 2 a = 1 b = 2
+rn = 4 d = 1 g = 2 a = 1 b = 2
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 8 d = 1 g = 2 a = 1 b = 2
+rn = 4 d = 1 g = 2 a = 1 b = 2
+rn = 4 d = 1 g = 2 a = 1 b = 2
+rn = 6 d = 1 g = 2 a = 1 b = 2
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 8 d = 1 g = 2 a = 1 b = 2
+rn = 9 d = 1 g = 2 a = 1 b = 2
+rn = 7 d = 1 g = 2 a = 1 b = 2
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 2 d = 1 g = 2 a = 1 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 9 d = 1 g = 1 a = 2 b = 1
+rn = 9 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 5 d = 1 g = 5 a = 2 b = 5
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 6 d = 1 g = 2 a = 2 b = 2
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 8 d = 1 g = 2 a = 2 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 5 d = 1 g = 5 a = 2 b = 5
+rn = 8 d = 1 g = 5 a = 2 b = 5
+rn = 9 d = 1 g = 5 a = 2 b = 5
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 9 d = 1 g = 1 a = 2 b = 1
+rn = 8 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 5 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 8 d = 1 g = 3 a = 2 b = 3
+rn = 5 d = 1 g = 3 a = 2 b = 3
+rn = 8 d = 1 g = 3 a = 2 b = 3
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 7 d = 1 g = 2 a = 2 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 7 d = 1 g = 7 a = 2 b = 7
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 9 d = 1 g = 6 a = 2 b = 6
+rn = 7 d = 1 g = 6 a = 2 b = 6
+rn = 7 d = 1 g = 6 a = 2 b = 6
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 5 d = 1 g = 5 a = 2 b = 5
+rn = 8 d = 1 g = 5 a = 2 b = 5
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 2 d = 1 g = 2 a = 2 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 4 d = 1 g = 1 a = 2 b = 1
+rn = 7 d = 1 g = 1 a = 2 b = 1
+rn = 1 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 8 d = 1 g = 8 a = 2 b = 8
+rn = 8 d = 1 g = 8 a = 2 b = 8
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 9 d = 1 g = 1 a = 2 b = 1
+rn = 2 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 5 d = 1 g = 1 a = 2 b = 1
+rn = 6 d = 1 g = 1 a = 2 b = 1
+rn = 7 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 9 d = 1 g = 9 a = 2 b = 9
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 7 d = 1 g = 6 a = 2 b = 6
+rn = 7 d = 1 g = 6 a = 2 b = 6
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 2 d = 1 g = 1 a = 2 b = 1
+rn = 4 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 8 d = 1 g = 2 a = 2 b = 2
+rn = 3 d = 1 g = 2 a = 2 b = 2
+rn = 3 d = 1 g = 2 a = 2 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 4 d = 1 g = 4 a = 2 b = 4
+rn = 9 d = 1 g = 4 a = 2 b = 4
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 8 d = 1 g = 3 a = 2 b = 3
+rn = 7 d = 1 g = 3 a = 2 b = 3
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 3 d = 1 g = 1 a = 2 b = 1
+rn = 1 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 7 d = 1 g = 7 a = 2 b = 7
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 4 d = 1 g = 3 a = 2 b = 3
+rn = 4 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 5 d = 1 g = 3 a = 2 b = 3
+rn = 8 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 7 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 8 d = 1 g = 1 a = 2 b = 1
+rn = 5 d = 1 g = 1 a = 2 b = 1
+rn = 8 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 8 d = 1 g = 8 a = -11 b = 8
+rn = 8 d = 1 g = 8 a = -11 b = 8
+rn = 3 d = 1 g = 3 a = -11 b = 3
+rn = 1 d = 1 g = 1 a = -11 b = 1
+rn = 2 d = 1 g = 1 a = -11 b = 1
+rn = 7 d = 1 g = 1 a = -11 b = 1
+rn = 4 d = 1 g = 1 a = -11 b = 1
+rn = 9 d = 1 g = 1 a = -11 b = 1
+rn = 8 d = 1 g = 1 a = -11 b = 1
+rn = 4 d = 1 g = 1 a = -11 b = 1
+rn = 5 d = 1 g = 1 a = -11 b = 1
+rn = 9 d = 1 g = 1 a = -11 b = 1
+rn = 2 d = 1 g = 1 a = -11 b = 1
+d = 2 g = 1 a = 1 b = 11
+rn = 7 d = 1 g = 7 a = 1 b = 7
+rn = 1 d = 1 g = 1 a = 1 b = 1
+rn = 8 d = 1 g = 1 a = 1 b = 1
+rn = 4 d = 1 g = 1 a = 1 b = 1
+rn = 7 d = 1 g = 1 a = 1 b = 1
+d = 2 g = 1 a = 1 b = 11
+rn = 5 d = 1 g = 5 a = 1 b = 5
+rn = 3 d = 1 g = 3 a = 1 b = 3
+rn = 3 d = 1 g = 3 a = 1 b = 3
+rn = 4 d = 1 g = 3 a = 1 b = 3
+rn = 1 d = 1 g = 1 a = 1 b = 1
+rn = 8 d = 1 g = 1 a = 1 b = 1
+rn = 3 d = 1 g = 1 a = 1 b = 1
+d = 2 g = 1 a = 1 b = 11
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 7 d = 1 g = 2 a = 1 b = 2
+rn = 6 d = 1 g = 2 a = 1 b = 2
+rn = 7 d = 1 g = 2 a = 1 b = 2
+rn = 9 d = 1 g = 2 a = 1 b = 2
+rn = 3 d = 1 g = 2 a = 1 b = 2
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 7 d = 1 g = 2 a = 1 b = 2
+rn = 6 d = 1 g = 2 a = 1 b = 2
+rn = 8 d = 1 g = 2 a = 1 b = 2
+rn = 3 d = 1 g = 2 a = 1 b = 2
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 3 d = 1 g = 2 a = 1 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 7 d = 1 g = 7 a = 2 b = 7
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 3 d = 1 g = 2 a = 2 b = 2
+rn = 5 d = 1 g = 2 a = 2 b = 2
+rn = 5 d = 1 g = 2 a = 2 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 4 d = 1 g = 1 a = 2 b = 1
+rn = 4 d = 1 g = 1 a = 2 b = 1
+rn = 8 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 4 d = 1 g = 4 a = 2 b = 4
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 8 d = 1 g = 3 a = 2 b = 3
+rn = 4 d = 1 g = 3 a = 2 b = 3
+rn = 7 d = 1 g = 3 a = 2 b = 3
+rn = 4 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 9 d = 1 g = 2 a = 2 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 5 d = 1 g = 5 a = 2 b = 5
+rn = 9 d = 1 g = 5 a = 2 b = 5
+rn = 7 d = 1 g = 5 a = 2 b = 5
+rn = 5 d = 1 g = 5 a = 2 b = 5
+rn = 8 d = 1 g = 5 a = 2 b = 5
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 6 d = 1 g = 1 a = 2 b = 1
+rn = 1 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 8 d = 1 g = 8 a = 2 b = 8
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 7 d = 1 g = 3 a = 2 b = 3
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 9 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 4 d = 1 g = 4 a = 2 b = 4
+rn = 6 d = 1 g = 4 a = 2 b = 4
+rn = 8 d = 1 g = 4 a = 2 b = 4
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 7 d = 1 g = 2 a = 2 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 7 d = 1 g = 6 a = 2 b = 6
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 5 d = 1 g = 3 a = 2 b = 3
+rn = 7 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 2 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 4 d = 1 g = 4 a = 2 b = 4
+rn = 5 d = 1 g = 4 a = 2 b = 4
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+rn = 8 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 3 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 5 d = 1 g = 5 a = 2 b = 5
+rn = 7 d = 1 g = 5 a = 2 b = 5
+rn = 4 d = 1 g = 4 a = 2 b = 4
+rn = 7 d = 1 g = 4 a = 2 b = 4
+rn = 6 d = 1 g = 4 a = 2 b = 4
+rn = 6 d = 1 g = 4 a = 2 b = 4
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 8 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 4 d = 1 g = 4 a = 2 b = 4
+rn = 9 d = 1 g = 4 a = 2 b = 4
+rn = 6 d = 1 g = 4 a = 2 b = 4
+rn = 8 d = 1 g = 4 a = 2 b = 4
+rn = 6 d = 1 g = 4 a = 2 b = 4
+rn = 9 d = 1 g = 4 a = 2 b = 4
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 2 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 8 d = 1 g = 8 a = -11 b = 8
+rn = 8 d = 1 g = 8 a = -11 b = 8
+rn = 4 d = 1 g = 4 a = -11 b = 4
+rn = 9 d = 1 g = 4 a = -11 b = 4
+rn = 5 d = 1 g = 4 a = -11 b = 4
+rn = 1 d = 1 g = 1 a = -11 b = 1
+rn = 8 d = 1 g = 1 a = -11 b = 1
+rn = 8 d = 1 g = 1 a = -11 b = 1
+rn = 4 d = 1 g = 1 a = -11 b = 1
+rn = 3 d = 1 g = 1 a = -11 b = 1
+rn = 9 d = 1 g = 1 a = -11 b = 1
+d = 2 g = 1 a = 1 b = 11
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 1 d = 1 g = 1 a = 1 b = 1
+rn = 4 d = 1 g = 1 a = 1 b = 1
+rn = 9 d = 1 g = 1 a = 1 b = 1
+rn = 9 d = 1 g = 1 a = 1 b = 1
+d = 2 g = 1 a = 1 b = 11
+rn = 7 d = 1 g = 7 a = 1 b = 7
+rn = 5 d = 1 g = 5 a = 1 b = 5
+rn = 5 d = 1 g = 5 a = 1 b = 5
+rn = 9 d = 1 g = 5 a = 1 b = 5
+rn = 4 d = 1 g = 4 a = 1 b = 4
+rn = 3 d = 1 g = 3 a = 1 b = 3
+rn = 3 d = 1 g = 3 a = 1 b = 3
+rn = 9 d = 1 g = 3 a = 1 b = 3
+rn = 8 d = 1 g = 3 a = 1 b = 3
+rn = 2 d = 1 g = 2 a = 1 b = 2
+rn = 9 d = 1 g = 2 a = 1 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 9 d = 1 g = 9 a = 2 b = 9
+rn = 5 d = 1 g = 5 a = 2 b = 5
+rn = 5 d = 1 g = 5 a = 2 b = 5
+rn = 9 d = 1 g = 5 a = 2 b = 5
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 8 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 8 d = 1 g = 8 a = 2 b = 8
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 5 d = 1 g = 1 a = 2 b = 1
+rn = 8 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 9 d = 1 g = 6 a = 2 b = 6
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 5 d = 1 g = 3 a = 2 b = 3
+rn = 8 d = 1 g = 3 a = 2 b = 3
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 2 d = 1 g = 2 a = 2 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 8 d = 1 g = 1 a = 2 b = 1
+rn = 5 d = 1 g = 1 a = 2 b = 1
+rn = 3 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 1 d = 1 g = 1 a = 2 b = 1
+rn = 2 d = 1 g = 1 a = 2 b = 1
+rn = 9 d = 1 g = 1 a = 2 b = 1
+rn = 4 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 4 d = 1 g = 4 a = 2 b = 4
+rn = 8 d = 1 g = 4 a = 2 b = 4
+rn = 9 d = 1 g = 4 a = 2 b = 4
+rn = 4 d = 1 g = 4 a = 2 b = 4
+rn = 9 d = 1 g = 4 a = 2 b = 4
+rn = 8 d = 1 g = 4 a = 2 b = 4
+rn = 7 d = 1 g = 4 a = 2 b = 4
+rn = 2 d = 1 g = 2 a = 2 b = 2
+rn = 1 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 5 d = 1 g = 5 a = 2 b = 5
+rn = 6 d = 1 g = 5 a = 2 b = 5
+rn = 8 d = 1 g = 5 a = 2 b = 5
+rn = 7 d = 1 g = 5 a = 2 b = 5
+rn = 9 d = 1 g = 5 a = 2 b = 5
+rn = 6 d = 1 g = 5 a = 2 b = 5
+rn = 7 d = 1 g = 5 a = 2 b = 5
+rn = 7 d = 1 g = 5 a = 2 b = 5
+rn = 1 d = 1 g = 1 a = 2 b = 1
+d = 2 g = 2 a = 2 b = 11
+rn = 6 d = 1 g = 6 a = 2 b = 6
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 5 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+rn = 8 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+rn = 4 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+d = 2 g = 3 a = 3 b = 11
+rn = 2 d = 1 g = 2 a = 3 b = 2
+rn = 3 d = 1 g = 2 a = 3 b = 2
+rn = 4 d = 1 g = 2 a = 3 b = 2
+rn = 4 d = 1 g = 2 a = 3 b = 2
+d = 2 g = 3 a = 3 b = 11
+rn = 2 d = 1 g = 2 a = -11 b = 2
+rn = 5 d = 1 g = 2 a = -11 b = 2
+rn = 4 d = 1 g = 2 a = -11 b = 2
+rn = 3 d = 1 g = 2 a = -11 b = 2
+rn = 6 d = 1 g = 2 a = -11 b = 2
+rn = 3 d = 1 g = 2 a = -11 b = 2
+rn = 6 d = 1 g = 2 a = -11 b = 2
+rn = 5 d = 1 g = 2 a = -11 b = 2
+rn = 3 d = 1 g = 2 a = -11 b = 2
+d = 2 g = 2 a = 2 b = 11
+rn = 3 d = 1 g = 3 a = 2 b = 3
+rn = 5 d = 1 g = 3 a = 2 b = 3
+rn = 5 d = 1 g = 3 a = 2 b = 3
+rn = 4 d = 1 g = 3 a = 2 b = 3
+rn = 8 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+rn = 9 d = 1 g = 3 a = 2 b = 3
+rn = 7 d = 1 g = 3 a = 2 b = 3
+rn = 6 d = 1 g = 3 a = 2 b = 3
+d = 2 g = 3 a = 3 b = 11
+rn = 3 d = 1 g = 3 a = 3 b = 3
+rn = 2 d = 1 g = 2 a = 3 b = 2
+rn = 6 d = 1 g = 2 a = 3 b = 2
+rn = 8 d = 1 g = 2 a = 3 b = 2
+d = 2 g = 3 a = 3 b = 11
+rn = 4 d = 1 g = 4 a = 3 b = 4
+rn = 5 d = 1 g = 4 a = 3 b = 4
+rn = 2 d = 1 g = 2 a = 3 b = 2
+rn = 8 d = 1 g = 2 a = 3 b = 2
+rn = 7 d = 1 g = 2 a = 3 b = 2
+d = 2 g = 3 a = 3 b = 11
+rn = 2 d = 1 g = 2 a = 3 b = 2
+rn = 8 d = 1 g = 2 a = 3 b = 2
+rn = 1 d = 1 g = 1 a = 3 b = 1
+rn = 6 d = 1 g = 1 a = 3 b = 1
+d = 2 g = 3 a = 3 b = 11
+rn = 7 d = 1 g = 7 a = 3 b = 7
+rn = 1 d = 1 g = 1 a = 3 b = 1
+rn = 1 d = 1 g = 1 a = 3 b = 1
+rn = 3 d = 1 g = 1 a = 3 b = 1
+rn = 6 d = 1 g = 1 a = 3 b = 1
+d = 2 g = 3 a = 3 b = 11
+rn = 1 d = 1 g = 1 a = 3 b = 1
+rn = 4 d = 1 g = 1 a = 3 b = 1
+rn = 7 d = 1 g = 1 a = 3 b = 1
+rn = 6 d = 1 g = 1 a = 3 b = 1
+d = 2 g = 3 a = 3 b = 11
+rn = 6 d = 1 g = 6 a = 3 b = 6
+rn = 8 d = 1 g = 6 a = 3 b = 6
+rn = 3 d = 1 g = 3 a = 3 b = 3
+rn = 2 d = 1 g = 2 a = 3 b = 2
+rn = 3 d = 1 g = 2 a = 3 b = 2
+rn = 9 d = 1 g = 2 a = 3 b = 2
+d = 2 g = 3 a = 3 b = 11
+rn = 6 d = 1 g = 6 a = 3 b = 6
+rn = 7 d = 1 g = 6 a = 3 b = 6
+rn = 6 d = 1 g = 6 a = 3 b = 6
+rn = 6 d = 1 g = 6 a = 3 b = 6
+rn = 2 d = 1 g = 2 a = 3 b = 2
+rn = 3 d = 1 g = 2 a = 3 b = 2
+d = 2 g = 3 a = 3 b = 11
+rn = 4 d = 1 g = 4 a = 3 b = 4
+rn = 2 d = 1 g = 2 a = 3 b = 2
+rn = 5 d = 1 g = 2 a = 3 b = 2
+rn = 3 d = 1 g = 2 a = 3 b = 2
+rn = 3 d = 1 g = 2 a = 3 b = 2
+d = 2 g = 3 a = 3 b = 11
