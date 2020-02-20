@@ -1,5 +1,5 @@
 # Reincorment Learning 2020 - Assignment 1: Heuristic Planning
-# Auke Bruinsma (s1594443), Meng Yao,
+# Auke Bruinsma (s1594443), Meng Yao, Analía Bannura
 # This file contains part 3 of the assignment: Search.
 
 # Imports.
@@ -142,12 +142,11 @@ def play_game(board):
 		ai_make_move(board)
 		player_make_move(board)
 
-if __name__ == '__main__':
-	# Initialise the board.
-	board = HexBoard(BOARD_SIZE)
+# Initialise the board.
+board = HexBoard(BOARD_SIZE)
 
-	# Play the game.
-	play_game(board)
+# Play the game.
+play_game(board)
 
 
 
