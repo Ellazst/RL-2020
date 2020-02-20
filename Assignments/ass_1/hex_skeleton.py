@@ -85,6 +85,7 @@ class HexBoard:
 
 	# Print the current state of the board.
 	def print(self):
+		print(f'\033c') # Clears terminal screen.
 		print("   ",end="")
 		for y in range(self.size):
 			print(chr(y+ord('a')),"",end="")
@@ -96,8 +97,8 @@ class HexBoard:
 				print(" ", end="")
 			for x in range(self.size):
 				piece = self.board[x,y]
-				if piece == HexBoard.BLUE: print("b ",end="")
-				elif piece == HexBoard.RED: print("r ",end="")
+				if piece == HexBoard.BLUE: print("\033[44mb\033[49m ",end="")
+				elif piece == HexBoard.RED: print(f"\033[41mr\033[49m ",end="")
 				else:
 					if x==self.size:
 						print("-",end="")
